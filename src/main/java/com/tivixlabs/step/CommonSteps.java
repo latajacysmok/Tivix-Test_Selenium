@@ -21,7 +21,7 @@ public class CommonSteps implements En {
             if(scenario.isFailed()){
                 scenario.embed(((TakesScreenshot)webDriver).getScreenshotAs(OutputType.BYTES), "image/png");
             }
-            webDriver.quit();
+            webDriver.close();
         });
 
         Given("Navigate to {string} using {string}", (String url, String browser) -> {
